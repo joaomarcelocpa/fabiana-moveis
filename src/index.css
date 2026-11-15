@@ -1,0 +1,107 @@
+@import 'tailwindcss';
+
+/* Identidade da Fabiana: azul e amarelo da logo. Os nomes viram classes (bg-brand, text-sun...). */
+@theme {
+  --color-brand: #0057a8;
+  --color-brand-dark: #00417f;
+  --color-brand-light: #0a78d1;
+  --color-mist: #eef5fc;
+  --color-paper: #f7f9fc;
+  --color-sun: #fdc80c;
+  --color-sun-dark: #e0ae00;
+  --color-navy: #071a2f;
+  --color-navy-2: #0c2744;
+  --color-ink: #0b1b2e;
+  --color-muted: #5b6b7c;
+  --color-line: #e4eaf1;
+
+  /* O desenho original usa entrelinha 1,7 no texto corrido; as classes text-xs/sm/... do Tailwind trariam 1,43. */
+  --text-xs--line-height: 1.7;
+  --text-sm--line-height: 1.7;
+  --text-base--line-height: 1.7;
+  --text-xl--line-height: 1.7;
+  --text-2xl--line-height: 1.7;
+
+  --font-sans: Poppins, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-script: Caveat, 'Segoe Script', cursive;
+}
+
+/* Pontos de quebra: o desenho original usa max-width, então mantemos a mesma lógica. */
+@custom-variant laptop (@media (max-width: 1100px));
+@custom-variant tablet (@media (max-width: 860px));
+@custom-variant sheet (@media (max-width: 760px));
+@custom-variant narrow (@media (max-width: 700px));
+@custom-variant phone (@media (max-width: 560px));
+@custom-variant tiny (@media (max-width: 520px));
+
+:root {
+  --wrap: 1180px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 16px;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    font: 400 14px/1.7 var(--font-sans);
+    color: var(--color-ink);
+    background: #fff;
+    -webkit-font-smoothing: antialiased;
+  }
+  a,
+  button {
+    touch-action: manipulation;
+  }
+  :focus-visible {
+    outline: 3px solid var(--color-sun);
+    outline-offset: 3px;
+    border-radius: 8px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    * {
+      transition: none !important;
+    }
+  }
+}
+
+@layer components {
+  /* Largura útil da página: 1180px no máximo, com 24px (16px no celular) de respiro. */
+  .wrap {
+    width: min(100% - 48px, var(--wrap));
+    margin-inline: auto;
+  }
+  @media (max-width: 520px) {
+    .wrap {
+      width: min(100% - 32px, var(--wrap));
+    }
+  }
+
+  /* Recorte do logo: pega só o desenho (sem a frase) de dentro do arquivo original. */
+  .logo {
+    --lh: 58px;
+    display: block;
+    flex: none;
+    height: var(--lh);
+    aspect-ratio: 1560 / 1120;
+    background: url('/img/logo-fabiana.webp') no-repeat;
+    background-size: calc(var(--lh) * 2000 / 1120) auto;
+    background-position: calc(var(--lh) * -220 / 1120) calc(var(--lh) * -80 / 1120);
+  }
+
+  /* Seta das listas (select) igual nas duas. */
+  .select-chevron {
+    appearance: none;
+    -webkit-appearance: none;
+    padding-right: 46px;
+    cursor: pointer;
+    text-overflow: ellipsis;
+    background: #fff
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2.5 4.5l3.5 3.5 3.5-3.5' fill='none' stroke='%230b1b2e' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+      no-repeat right 16px center / 14px 14px;
+  }
+}
