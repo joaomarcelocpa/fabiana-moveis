@@ -15,7 +15,7 @@ export function Sobre() {
     <FaixaEscura id="sobre" aria-labelledby="sobre-h">
       <Container className="relative z-[2] grid grid-cols-[1.05fr_.9fr_1.1fr] items-stretch laptop:grid-cols-2 tablet:grid-cols-1">
         <div className="grid content-center justify-items-start gap-4 py-14 pr-10 tablet:pr-0">
-          <Eyebrow tom="escuro">Sobre a Fabiana</Eyebrow>
+          <Eyebrow tom="escuro">Sobre a Fabiana Móveis</Eyebrow>
           <Titulo id="sobre-h">Mais que uma loja de móveis</Titulo>
           <Lead tom="escuro">
             A loja que vende barato sem abrir mão da qualidade, com frete e montagem grátis e condições de pagamento

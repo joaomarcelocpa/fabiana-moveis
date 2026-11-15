@@ -13,7 +13,7 @@ export function FaixaCta() {
           <h2 id="cta-h" className="text-[clamp(22px,2.2vw,28px)] leading-[1.2] font-bold">
             Pronto para mobiliar a sua casa?
           </h2>
-          <p className="text-[13px] text-[#d9e9fa]">Fale com a loja e simule seu crediário hoje.</p>
+          <p className="text-[13px] text-[#d9e9fa]">Fale com a loja e solicite seu crediário hoje.</p>
         </div>
         <Button href="#whatsapp" variant="yellow">
           Entre em contato <Icon name="arrow" />

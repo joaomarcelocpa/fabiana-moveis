@@ -6,9 +6,9 @@ import type { Pagamento } from '../../data/tipos'
 import { brl } from '../../lib/format'
 import { montarMensagem, urlWhatsApp } from '../../lib/whatsapp'
 import { Button } from '../ui/Button'
-import { Icon } from '../ui/Icon'
+import { Icon, WhatsAppIcon } from '../ui/Icon'
 import { Container } from '../ui/Layout'
-import { Eyebrow, Lead, Titulo } from '../ui/Typography'
+import { Lead, Titulo } from '../ui/Typography'
 
 const FORMAS_PAGAMENTO: { valor: Pagamento; rotulo: string }[] = [
   { valor: 'crediario', rotulo: 'Crediário próprio' },
@@ -54,11 +54,10 @@ export function WhatsApp() {
     <section id="whatsapp" aria-labelledby="wa-h" className="bg-white py-[72px] tablet:py-14">
       <Container className="max-w-[760px]">
         <div className="mb-7 grid justify-items-center gap-3.5 text-center">
-          <Eyebrow>WhatsApp</Eyebrow>
-          <Titulo id="wa-h">Compre e simule o crediário pelo WhatsApp</Titulo>
+          <Titulo id="wa-h">Compre e solicite o crediário pelo WhatsApp</Titulo>
           <Lead className="max-w-[560px]">
             Conte o que você procura e como prefere pagar. A conversa abre direto com a loja que você escolher, e lá a
-            simulação do crediário é feita com você.
+            solicitação do crediário é feita com você.
           </Lead>
         </div>
 
@@ -154,6 +153,7 @@ export function WhatsApp() {
           )}
 
           <Button type="submit" variant="whatsapp" className="h-[52px] w-full text-sm">
+            <WhatsAppIcon className="size-5" />
             Enviar pelo WhatsApp <Icon name="arrow" />
           </Button>
           <p role="status" className="text-center text-xs text-muted">

@@ -9,7 +9,7 @@ interface DadosMensagem {
 }
 
 const FRASE_PAGAMENTO: Record<Pagamento, string> = {
-  crediario: 'Gostaria de simular o crediário próprio.',
+  crediario: 'Gostaria de solicitar o crediário próprio.',
   cartao: 'Quero parcelar em até 12x no cartão de crédito.',
   'nao-sei': 'Quero saber as condições de pagamento.',
 }

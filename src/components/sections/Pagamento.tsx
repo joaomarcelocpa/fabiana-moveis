@@ -68,10 +68,10 @@ export function Pagamento() {
             titulo="Crediário"
             destaque="Próprio"
             detalhe="feito na loja"
-            itens={['Direto com a Fabiana', 'Sem intermediário', 'Simule antes de comprar']}
+            itens={['Direto com a Fabiana', 'Sem intermediário', 'Solicite agora mesmo']}
             botao={
               <Button href="#whatsapp" variant="ghost" className="mt-1 h-10 w-full">
-                Simular crediário
+                Solicitar crediário
               </Button>
             }
           />

@@ -28,7 +28,7 @@ export function Hero() {
           </p>
           <div className="flex flex-wrap gap-3.5 tablet:[&>a]:flex-[1_1_100%]">
             <Button href="#whatsapp">
-              Simular crediário <Icon name="arrow" />
+              Solicitar crediário <Icon name="arrow" />
             </Button>
             <Button href="#produtos" variant="line">
               Ver produtos
@@ -69,7 +69,7 @@ export function Hero() {
         />
       </div>
 
-      <Manuscrito className="absolute top-14 right-[11%] z-[4] max-w-[220px] -rotate-6 text-center text-navy tablet:hidden">
+      <Manuscrito className="absolute top-14 right-[13%] z-[4] max-w-[220px] -rotate-6 text-center text-navy tablet:hidden">
         Sua casa, do seu jeito
         <svg viewBox="0 0 150 14" fill="none" stroke="#fdc80c" strokeWidth={3} strokeLinecap="round" className="mx-auto mt-1 block h-3.5 w-[150px]">
           <path d="M3 9c30-8 70-8 144-3" />
