@@ -56,7 +56,7 @@ export function Header() {
         </nav>
 
         <Button href="#whatsapp" className="tablet:hidden">
-          Entre em contato <Icon name="arrow" />
+          Compre pelo WhatsApp <Icon name="arrow" />
         </Button>
 
         <button
